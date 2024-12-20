@@ -8,7 +8,7 @@ import {
   PiArrowsOutLineHorizontalFill,
 } from "react-icons/pi";
 import { CiGrid42 } from "react-icons/ci";
-import { MdSupportAgent } from "react-icons/md";
+import {  MdSupportAgent } from "react-icons/md";
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -91,6 +91,8 @@ const Sidebar = () => {
           md:block md:relative`}>
         <div className="flex flex-col justify-between h-full">
           <div>
+           
+
             {/* Main Nav List */}
             <div className="flex flex-col gap-2">
               {mainNavlink.map((item, index) => {
@@ -116,9 +118,7 @@ const Sidebar = () => {
                         <p
                           className={`text-sm ${
                             isSidebarOpen ? "block" : "hidden"
-                          } ${
-                            isActive ? "text-black" : "text-black "
-                          } hover:text-white`}>
+                          } ${isActive ? "text-black" : "text-black "} hover:text-white`}>
                           {item.name}
                         </p>
                       </Link>

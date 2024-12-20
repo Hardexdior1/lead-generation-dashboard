@@ -16,7 +16,7 @@ import nike from "../../../public/Nike 1.png";
 import Image from "next/image";
 import Sliding from "./Sliding";
 
-const page = () => {
+const Leads = () => {
   const leads = [
     {
       name: "Jane Rayes",
@@ -181,7 +181,6 @@ const page = () => {
     },
   ];
 
-  
   const responsive2 = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 1024 },
@@ -200,12 +199,14 @@ const page = () => {
       items: 1,
     },
   };
+
   const [showLeads, setShowLeads] = useState(true);
 
   const toggleLeads = () => {
     setShowLeads(!showLeads);
   };
   const [name1, setName1] = useState("");
+
   const toggleName = (item) => {
     if (item == name1) {
       setName1("");
@@ -349,13 +350,12 @@ const page = () => {
           )}
         </div>
 
-
-        <Carousel
-          responsive={responsive2}
-          >
+        <Carousel responsive={responsive2}>
           {leads.map((item, index) => {
             return (
-              <div key={index} className="border grid gap-3 p-3 rounded-md z-10">
+              <div
+                key={index}
+                className="border grid gap-3 p-3 rounded-md z-10">
                 <p className="text-black font-semibold">
                   Engage with {item.name}{" "}
                 </p>
@@ -453,13 +453,11 @@ const page = () => {
           })}
         </Carousel>
 
-
         <Table1 leads={leads} />
       </section>
 
-      <a href="">REFRESH</a>
     </main>
   );
 };
 
-export default page;
+export default Leads;

@@ -2,18 +2,18 @@
 import React, { useState } from "react";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
-const page = () => {
+const Page = () => {
   const [name1, setName1] = useState(false);
+
   const toggleName = () => {
     setName1(!name1);
   };
+
   return (
     <div>
       {" "}
       <div className="p-4 rounded border">
-        <div className="flex justify-end text-2xl font-semibold ">
-          x
-        </div>
+        <div className="flex justify-end text-2xl font-semibold ">x</div>
 
         <h3 className="text-2xl font-semibold">Agent skills </h3>
 
@@ -86,7 +86,7 @@ const page = () => {
             Allow the agent to access email inboxes to read mail from knows
             vendors
           </p>
-        
+
           <div className="grid gap-4 md:grid-cols-5 mt-3 md:gap-2">
             <div className="md:col-span-4">
               <input
@@ -110,4 +110,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
